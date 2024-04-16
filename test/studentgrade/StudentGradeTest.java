@@ -1,12 +1,33 @@
 package studentgrade;
 
 import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 /* JUnit 3.8.1 */
 public class StudentGradeTest extends TestCase {
     
     public StudentGradeTest(String testName) {
         super(testName);
+    }
+
+    @BeforeClass
+    public static void setUpClass() throws Exception {
+    }
+
+    @AfterClass
+    public static void tearDownClass() throws Exception {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 
     public void testGetGrade95() {
@@ -32,4 +53,6 @@ public class StudentGradeTest extends TestCase {
         String result = StudentGrade.getGrade(mark);
         assertEquals(expResult, result);
     }
+
+  
 }
